@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living - Articles</title>
+    <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family:Cambria;
+                background-color: #BBD6B8;
+            }
+
+            .search {
+                display: flex;
+                gap: 10px;
+            }
+
+            .search input[type="text"] {
+                padding: 5px;
+                border: none;
+                border-bottom: 1px solid black;
+                font-size: 16px;
+                border-radius: 10px;
+            }
+            header {
+                background-color: #688269;
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 30px;
+            }
+
+            nav a {
+                color: white;
+                text-decoration: none;
+            }
+            nav li:hover {
+                background-color: #AEC2B6;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            .search button {
+                background-color:#AEC2B6;
+                color: white;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                transition: background-color 0.3s ease;
+                font-size: 16px;
+            }
+
+            .search button:hover {
+                background-color:#9df3a0;
+            }
+
+            main {
+                padding: 50px;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            .articles {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 40px;
+            }
+            .articles > article:hover {
+                transform: scale(1.1);
+            }
+
+            article {
+                background-color:rgb(164, 221, 202);
+                border-radius: 10px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+            }
+
+            article img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+
+            article h3 {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            article p {
+                padding: 0 20px;
+                text-align: justify;
+            }
+
+            article button {
+                display: block;
+                margin: 20px auto;
+                background-color: #4CAF50;
+                color: white;
+                padding: 5px 10px;
+                border: none;
+                border-radius: 5px;
+                font-family: Cambria;
+                transition: background-color 0.3s ease;
+            }
+
+            article button:hover {
+                background-color: #BBD6B8;
+            }
+
+            footer {
+                background-color: #688269;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }
+
+            @media screen and (max-width: 768px) {
+                .search {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .search input[type="text"] {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+
+                .articles {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+
+            @media screen and (max-width: 480px) {
+                .search button {
+                    padding: 5px 5px;
+                    font-size: 14px;
+                }
+
+                .articles {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+
+                article img {
+                    height: 150px;
+                }
+
+                article h3 {
+                    font-size: 24px;
+                }
+
+                article p {
+                    font-size: 14px;
+                }
+
+                article button {
+                    font-size: 14px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Healthy Living</h1>
+        <nav>
+            <ul>
+                <li><a href="utama.html">Home</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search">
+            <input type="text" placeholder="Search">
+            <button>Go</button>
+        </div>
+    </header>
+    <main>
+        <h1>Articles</h1>
+        <section class="articles">
+            <article>
+                <img src="stay_fit.jpg" alt="Article 1">
+                <h3>How to Stay Fit</h3>
+                <p>Try to do at least 30 minutes of exercise every day. You can choose activities that you enjoy, 
+                    such as walking, running, cycling, or swimming so that your body becomes fitter and healthier</p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <img src="eating2.png" alt="Article 2">
+                <h3>Healthy Eating Habits</h3>
+                <p>Avoid instant food, instant food often contains a lot of sugar, salt and preservatives that 
+                    can damage the body's health. Eat a balanced diet of fruits, vegetables, whole grains, lean protein, 
+                    and low-fat or non-fat dairy products.</p>
+                <button>Read More</button>
+            </article>
+            <article>
+                <img src="mental.jpg" alt="Article 3">
+                <h3>Mental Health Matters</h3>
+                <p>Don't hesitate to seek support from family, friends, or a mental health professional if you are 
+                    having problems. Find ways to manage your stress, such as meditation, yoga or calming activities 
+                    such as reading or writing.</p>
+                <button>Read More</button>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Healthy Living</p>
+    </footer>
+</body>
+</html>
